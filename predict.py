@@ -49,9 +49,9 @@ def main():
                         current.get_parent()
 
             for i in root.get_children():
-                adds = 2.5 * np.tan(i.get_value()-0.15)
+                adds = 30 ** (i.get_value() - 0.75) - 0.3
                 '''print(pres)'''
-                pres[i.get_coordinate()[0] * 3 + i.get_coordinate()[1]] += adds * 5
+                pres[i.get_coordinate()[0] * 3 + i.get_coordinate()[1]] += adds * 0.5
                 '''print(i.get_coordinate())
                 print(i.get_value())
                 print(adds)
