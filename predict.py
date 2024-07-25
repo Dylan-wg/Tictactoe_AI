@@ -25,7 +25,7 @@ def main():
             cbb = copy.deepcopy(cb)
             cbb.set_flag()
             root = Node(copy.deepcopy(cbb), cbb.get_flag(), coordinate=None)
-            for _ in range(0, 10000):
+            for _ in range(0, 12000):
                 cbb = copy.deepcopy(cb)
                 current = root
                 while (not cbb.is_full()) and cbb.get_winner() == 0:
@@ -49,13 +49,13 @@ def main():
                         current.get_parent()
 
             for i in root.get_children():
-                adds = 30 ** (i.get_value() - 0.75) - 0.3
-                '''print(pres)'''
-                pres[i.get_coordinate()[0] * 3 + i.get_coordinate()[1]] += adds * 0.5
-                '''print(i.get_coordinate())
+                adds = 20 ** (i.get_value() - 0.4) - 0.3
+                print(pres)
+                pres[i.get_coordinate()[0] * 3 + i.get_coordinate()[1]] += adds * 1.5
+                print(i.get_coordinate())
                 print(i.get_value())
                 print(adds)
-            print(pres)'''
+            print(pres)
 
             max_p = 0
             for i in cs:
